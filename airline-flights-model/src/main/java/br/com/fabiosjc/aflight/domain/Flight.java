@@ -2,10 +2,7 @@ package br.com.fabiosjc.aflight.domain;
 
 import br.com.fabiosjc.aflight.domain.enums.FlightStatus;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -27,6 +24,14 @@ public class Flight {
     private Airplane airplane;
     private Pilot pilot;
 
+    public Flight() {
+        // default constructor
+    }
+
+    public Flight(String flightNumber) {
+        this.flightNumber = flightNumber;
+    }
+
     @Id
     @GeneratedValue
     public Long getId() {
@@ -37,7 +42,7 @@ public class Flight {
         this.id = id;
     }
 
-    @Column(name = "FLIGHT_NUMBER", nullable=false)
+    @Column(name = "FLIGHT_NUMBER", nullable = false)
     public String getFlightNumber() {
         return flightNumber;
     }
@@ -62,6 +67,7 @@ public class Flight {
         this.arrival = arrival;
     }
 
+    @OneToOne
     public City getOrigin() {
         return origin;
     }
@@ -70,6 +76,7 @@ public class Flight {
         this.origin = origin;
     }
 
+    @OneToOne
     public City getDestination() {
         return destination;
     }
@@ -78,6 +85,7 @@ public class Flight {
         this.destination = destination;
     }
 
+    @OneToOne
     public Airplane getAirplane() {
         return airplane;
     }
@@ -86,6 +94,7 @@ public class Flight {
         this.airplane = airplane;
     }
 
+    @OneToOne
     public Pilot getPilot() {
         return pilot;
     }

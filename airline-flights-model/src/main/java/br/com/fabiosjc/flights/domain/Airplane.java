@@ -1,20 +1,20 @@
-package br.com.fabiosjc.aflight.domain;
+package br.com.fabiosjc.flights.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Represanta as informações de um Piloto
+ * Representação simplificada da entidade Aeronave
  *
- * Created by fabio on 20/08/17.
+ * @author fabio on 20/08/17.
  */
 @Entity
-public class Pilot {
+public class Airplane {
 
     private Long id;
 
-    public Pilot() {
+    public Airplane() {
         // default constructor
     }
 

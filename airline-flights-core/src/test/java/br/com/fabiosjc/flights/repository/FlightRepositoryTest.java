@@ -1,7 +1,7 @@
-package br.com.fabiosjc.aflight.repository;
+package br.com.fabiosjc.flights.repository;
 
-import br.com.fabiosjc.aflight.domain.Flight;
-import br.com.fabiosjc.aflight.service.SpringBootWebApplication;
+import br.com.fabiosjc.flights.domain.Flight;
+import br.com.fabiosjc.flights.service.FlightsApplication;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,9 +16,8 @@ import java.util.List;
  * @author fabio on 20/08/17.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootWebApplication.class)
+@SpringBootTest(classes = FlightsApplication.class)
 public class FlightRepositoryTest {
-
 
   @Autowired
   private FlightRepository repository;

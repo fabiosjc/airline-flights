@@ -1,19 +1,22 @@
-package br.com.fabiosjc.aflight.domain;
+package br.com.fabiosjc.flights.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
- * Representação simplificada de uma cidade
+ * Represanta as informações de um Piloto
  *
- *@author fabio on 20/08/17.
+ * Created by fabio on 20/08/17.
  */
 @Entity
-public class City {
+public class Pilot {
 
     private Long id;
-    private String name;
+
+    public Pilot() {
+        // default constructor
+    }
 
     @Id
     @GeneratedValue
@@ -23,13 +26,5 @@ public class City {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

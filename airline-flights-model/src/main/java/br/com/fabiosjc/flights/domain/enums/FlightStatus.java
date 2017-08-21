@@ -1,4 +1,4 @@
-package br.com.fabiosjc.aflight.domain.enums;
+package br.com.fabiosjc.flights.domain.enums;
 
 /**
  * Representa os status de um vôo, informando sobre o que aconteceu ou está acontecendo com ele.
@@ -10,7 +10,6 @@ public enum FlightStatus {
     EN_ROUTE ("En Route"),
     DELAYED ("Delayed"),
     LANDED ("Landed"),
-    // Desconhecido
     UNKNOWN ("Unknown");
 
     private String status;

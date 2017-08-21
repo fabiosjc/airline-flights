@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>airline-flights-model</artifactId>
-    <packaging>jar</packaging>
+    <!--<packaging>jar</packaging>-->
 
     <!-- Dependências dos módulos -->
     <dependencies>

@@ -1,6 +1,6 @@
-package br.com.fabiosjc.aflight.domain;
+package br.com.fabiosjc.flights.domain;
 
-import br.com.fabiosjc.aflight.domain.enums.FlightStatus;
+import br.com.fabiosjc.flights.domain.enums.FlightStatus;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -14,7 +14,7 @@ import java.util.Date;
 public class Flight {
 
     private Long id;
-    private String flightNumber;
+    private String number;
     private FlightStatus flightStatus;
     private Date departure;
     private Date arrival;
@@ -28,8 +28,8 @@ public class Flight {
         // default constructor
     }
 
-    public Flight(String flightNumber) {
-        this.flightNumber = flightNumber;
+    public Flight(String number) {
+        this.number = number;
     }
 
     @Id
@@ -42,13 +42,13 @@ public class Flight {
         this.id = id;
     }
 
-    @Column(name = "FLIGHT_NUMBER", nullable = false)
-    public String getFlightNumber() {
-        return flightNumber;
+    @Column(nullable = false)
+    public String getNumber() {
+        return number;
     }
 
-    public void setFlightNumber(String flightNumber) {
-        this.flightNumber = flightNumber;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public Date getDeparture() {
